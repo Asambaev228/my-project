@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доброе сердце - Волонтерское движение</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-svg">
+                    <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Рука -->
+                        <path id="hand" d="M30,40 C35,35 42,32 47,28 C52,24 55,18 52,13 C49,8 42,8 38,12 C35,15 32,18 30,21 C28,18 25,15 22,12 C18,8 11,8 8,13 C5,18 8,24 13,28 C18,32 25,35 30,40 Z" 
+                              fill="#4CAF50" stroke="#2E7D32" stroke-width="1.5" stroke-linejoin="round"/>
+                        
+                        <!-- Сердце -->
+                        <path id="heart" d="M30,24 C26,20 22,16 18,16 C14,16 10,20 10,24 C10,28 14,32 18,36 C22,40 26,38 30,34 C34,38 38,40 42,36 C46,32 50,28 50,24 C50,20 46,16 42,16 C38,16 34,20 30,24 Z" 
+                              fill="#F44336" stroke="#D32F2F" stroke-width="1.5" transform="translate(0, -2)"/>
+                        
+                        <!-- Детали на руке -->
+                        <path d="M25,25 C26,26 27,27 28,28" stroke="#2E7D32" stroke-width="1" fill="none"/>
+                        <path d="M30,22 C31,23 32,24 33,25" stroke="#2E7D32" stroke-width="1" fill="none"/>
+                        <path d="M35,25 C36,26 37,27 38,28" stroke="#2E7D32" stroke-width="1" fill="none"/>
+                    </svg>
+                </div>
+                <h1>Доброе сердце</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#events">Мероприятия</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contacts">Контакты</a></li>
+                </ul>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Сделаем мир лучше вместе!</h2>
+            <p>Присоединяйтесь к нашему волонтерскому движению и помогайте тем, кто в этом нуждается</p>
+            <a href="#events" class="btn">Участвовать</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>О нашем движении</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Доброе сердце - это волонтерское движение, созданное в 2015 году с целью помощи нуждающимся и улучшения жизни в нашем городе.</p>
+                    <p>За время нашей работы мы реализовали более 100 благотворительных проектов, помогли тысячам людей и объединили более 500 волонтеров.</p>
+                    <p>Наши основные направления:</p>
+                    <ul>
+                        <li>Помощь пожилым людям</li>
+                        <li>Поддержка детей-сирот</li>
+                        <li>Экологические акции</li>
+                        <li>Благотворительные сборы</li>
+                        <li>Образовательные программы</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="team.jpg" alt="Наша команда">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="events">
+        <div class="container">
+            <h2>Календарь мероприятий</h2>
+            <div class="filters">
+                <select id="month-filter">
+                    <option value="all">Все месяцы</option>
+                    <option value="0">Январь</option>
+                    <option value="1">Февраль</option>
+                    <option value="2">Март</option>
+                    <option value="3">Апрель</option>
+                    <option value="4">Май</option>
+                    <option value="5">Июнь</option>
+                    <option value="6">Июль</option>
+                    <option value="7">Август</option>
+                    <option value="8">Сентябрь</option>
+                    <option value="9">Октябрь</option>
+                    <option value="10">Ноябрь</option>
+                    <option value="11">Декабрь</option>
+                </select>
+                <select id="type-filter">
+                    <option value="all">Все типы</option>
+                    <option value="ecology">Экология</option>
+                    <option value="children">Дети</option>
+                    <option value="elderly">Пожилые</option>
+                    <option value="education">Образование</option>
+                    <option value="fundraising">Сбор средств</option>
+                </select>
+            </div>
+            <div id="calendar" class="calendar"></div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Наши мероприятия</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="event1.jpg" alt="Уборка парка">
+                    <div class="gallery-overlay">
+                        <h3>Уборка городского парка</h3>
+                        <p>15 мая 2025</p>
+                        <button class="like-btn" data-id="1">
+                            <i class="far fa-heart"></i> <span class="like-count">24</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="event2.jpg" alt="Помощь детям">
+                    <div class="gallery-overlay">
+                        <h3>Праздник для детей-сирот</h3>
+                        <p>1 июня 2025</p>
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i> <span class="like-count">18</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="event3.jpg" alt="Сбор вещей">
+                    <div class="gallery-overlay">
+                        <h3>Сбор вещей для нуждающихся</h3>
+                        <p>10 декабря 2025</p>
+                        <button class="like-btn" data-id="3">
+                            <i class="far fa-heart"></i> <span class="like-count">32</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="support">
+        <div class="container">
+            <h2>Поддержать наши проекты</h2>
+            <p>Вы можете помочь нашему движению, сделав пожертвование или став волонтером</p>
+            <div class="support-options">
+                <div class="support-card">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <h3>Финансовая помощь</h3>
+                    <p>Любая сумма поможет нам организовать больше мероприятий</p>
+                    <button class="support-btn" data-project="general">Поддержать</button>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Вещевая помощь</h3>
+                    <p>Одежда, продукты, предметы первой необходимости</p>
+                    <button class="support-btn" data-project="clothes">Поддержать</button>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Волонтерство</h3>
+                    <p>Станьте частью нашей команды и помогайте лично</p>
+                    <button class="support-btn" data-project="volunteer">Присоединиться</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2>Контакты</h2>
+            <div class="contact-info">
+                <div class="contact-details">
+                    <h3>Как с нами связаться</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Магнитогорск, ул. Ленина, д. 38</p>
+                    <p><i class="fas fa-phone"></i> +7 (904) 815-60-88</p>
+                    <p><i class="fas fa-envelope"></i> info@dobroeserdce.ru</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-vk"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Напишите нам</h3>
+                    <form id="feedback-form">
+                        <input type="text" placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Ваш email" required>
+                        <textarea placeholder="Ваше сообщение" required></textarea>
+                        <button type="submit" class="btn">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-svg small">
+                        <svg width="40" height="40" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30,40 C35,35 42,32 47,28 C52,24 55,18 52,13 C49,8 42,8 38,12 C35,15 32,18 30,21 C28,18 25,15 22,12 C18,8 11,8 8,13 C5,18 8,24 13,28 C18,32 25,35 30,40 Z" 
+                                  fill="#4CAF50" stroke="#2E7D32" stroke-width="1.5" stroke-linejoin="round"/>
+                            <path d="M30,24 C26,20 22,16 18,16 C14,16 10,20 10,24 C10,28 14,32 18,36 C22,40 26,38 30,34 C34,38 38,40 42,36 C46,32 50,28 50,24 C50,20 46,16 42,16 C38,16 34,20 30,24 Z" 
+                                  fill="#F44336" stroke="#D32F2F" stroke-width="1.5" transform="translate(0, -2)"/>
+                        </svg>
+                    </div>
+                    <p>Доброе сердце - волонтерское движение</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Разделы</h4>
+                    <ul>
+                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#events">Мероприятия</a></li>
+                        <li><a href="#gallery">Галерея</a></li>
+                        <li><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer-subscribe">
+                    <h4>Подписаться на новости</h4>
+                    <form id="subscribe-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit" class="btn">Подписаться</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Доброе сердце. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modal-title">Поддержать проект</h3>
+            <div id="modal-body">
+                <p>Спасибо за ваше желание помочь!</p>
+                <p>Пожалуйста, выберите способ поддержки:</p>
+                <div class="payment-options">
+                    <button class="payment-btn">Банковская карта</button>
+                    <button class="payment-btn">Электронный кошелек</button>
+                    <button class="payment-btn">СБП</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
